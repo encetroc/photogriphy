@@ -1,14 +1,16 @@
-import "./App.scss";
+import { Outlet, Link } from 'react-router-dom'
+import { NavigationBar } from 'components'
+import './App.scss'
 
 function App() {
   return (
     <div className="container">
-      <nav className="nav"></nav>
+      <NavigationBar />
       <div className="content">
-        <div className="dummy">hello</div>
+        <Outlet />
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

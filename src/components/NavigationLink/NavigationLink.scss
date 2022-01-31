@@ -1,0 +1,15 @@
+.link {
+  width: 66px;
+  height: 66px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  .link {
+    width: 48px;
+    height: 48px;
+  }
+}

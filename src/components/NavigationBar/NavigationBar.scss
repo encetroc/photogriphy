@@ -1,0 +1,39 @@
+.navigation {
+  background-color: #3c3c3c;
+  height: 100vh;
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    padding-top: 49.2px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .navigation {
+    height: 80px;
+    width: 100vw;
+    flex-direction: row;
+
+    &__logo {
+      padding-top: unset;
+      padding-left: 24px;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}
