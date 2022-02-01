@@ -1,3 +1,26 @@
+import { CardPhoto } from 'components'
+
 export function AllPhotos() {
-  return <span>all photos</span>
+  return (
+    <>
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+      <CardPhoto />
+    </>
+  )
 }

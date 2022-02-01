@@ -6,6 +6,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  z-index: 100;
 
   &__logo {
     padding-top: 49.2px;
@@ -25,6 +27,7 @@
     height: 80px;
     width: 100vw;
     flex-direction: row;
+    bottom: 0;
 
     &__logo {
       padding-top: unset;
