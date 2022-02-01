@@ -1,3 +1,4 @@
+import { Heart } from 'icons'
 import './CardPhoto.scss'
 
 const min = 1
@@ -11,6 +12,9 @@ export function CardPhoto() {
           Math.floor(Math.random() * (max - min + 1)) + min
         }`}
       />
+      <div className="gridCard__heart">
+        <Heart/>
+      </div>
     </div>
   )
 }

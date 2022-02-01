@@ -2,8 +2,29 @@
   display: inline-block;
   position: relative;
 
+  &:first-child {
+    margin-bottom: 24px;
+  }
+
+  & + .gridCard {
+    margin-bottom: 24px;
+  }
+
   img {
     width: 100%;
     border-radius: 5px;
+  }
+
+  &__heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background-color: #2D9CDB;
   }
 }
