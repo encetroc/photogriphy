@@ -4,7 +4,6 @@ import './App.scss'
 
 function App() {
   const { id } = useParams()
-  console.log(id)
   return (
     <div className="container">
       <NavigationBar />

@@ -1,15 +1,17 @@
+import { useParams } from 'react-router-dom'
 import { Avatar } from 'icons'
 import { LikeBtn, CloseBtn } from 'components'
 import './Modal.scss'
 
 export function Modal() {
+  const { id } = useParams()
   return (
     <div className="modal">
       <div className="modal__inner">
         <LikeBtn className="modal__like--mobile" />
         <CloseBtn className="modal__close--mobile" />
         <div className="modal__img">
-          <img src="https://source.unsplash.com/random/1" alt="sample" />
+          <img src={`https://source.unsplash.com/random/${id}`} alt="sample" />
         </div>
         <div className="modal__content">
           <LikeBtn className="modal__like" />
