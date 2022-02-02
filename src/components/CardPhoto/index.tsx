@@ -13,7 +13,7 @@ export function CardPhoto() {
         }`}
       />
       <div className="gridCard__heart">
-        <Heart/>
+        <Heart width={16} heigth={16}/>
       </div>
     </div>
   )

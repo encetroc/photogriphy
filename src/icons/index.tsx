@@ -1,6 +1,12 @@
-export function Image() {
+export function Image({ width = 24, heigth = 24 }) {
   return (
-    <svg width={24} height={24} fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width={width}
+      height={heigth}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M16.303 2.75H7.654C4.64 2.75 2.75 4.884 2.75 7.904v8.15c0 3.02 1.881 5.153 4.904 5.153h8.648c3.024 0 4.905-2.134 4.905-5.154V7.904c0-3.02-1.88-5.154-4.904-5.154Z"
         stroke="#fff"
@@ -19,9 +25,15 @@ export function Image() {
   )
 }
 
-export function Heart() {
+export function Heart({ width = 24, heigth = 24 }) {
   return (
-    <svg width={24} height={24} fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width={width}
+      height={heigth}
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M11.761 20.854a34.853 34.853 0 0 1-6.022-4.689 11.984 11.984 0 0 1-2.866-4.57c-1.076-3.345.18-7.174 3.698-8.307a5.978 5.978 0 0 1 5.425.913 5.987 5.987 0 0 1 5.425-.913c3.517 1.133 4.783 4.962 3.707 8.307a11.984 11.984 0 0 1-2.866 4.57 34.865 34.865 0 0 1-6.022 4.689l-.235.146-.244-.146v0Z"
         stroke="#fff"
@@ -40,9 +52,15 @@ export function Heart() {
   )
 }
 
-export function Logo() {
+export function Logo({ width = 24, heigth = 22 }) {
   return (
-    <svg width={24} height={22} fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width={width}
+      height={heigth}
+      viewBox="0 0 24 22"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         d="M20.062 21.547a2.783 2.783 0 0 1-.917-.59 2.567 2.567 0 0 1-.59-.85 3.055 3.055 0 0 1-.2-1.116 2.705 2.705 0 0 1 .2-1.047 2.79 2.79 0 0 1 .59-.918 2.71 2.71 0 0 1 .917-.586 3.058 3.058 0 0 1 1.116-.197 2.68 2.68 0 0 1 1.969.783 2.73 2.73 0 0 1 .852 1.966 2.5 2.5 0 0 1-.852 1.965 2.793 2.793 0 0 1-1.943.787h-.05c-.373 0-.743-.067-1.092-.197ZM9.378 21.48l-4.593-6.742h-.129v6.742H0V.2h4.656v12.966h.067l4.46-5.697h5.636l-5.427 6.348 5.694 7.662H9.377Z"
         fill="#fff"
@@ -51,9 +69,15 @@ export function Logo() {
   )
 }
 
-export function Avatar() {
+export function Avatar({ width = 16, heigth = 16 }) {
   return (
-    <svg width={16} height={16} fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width={width}
+      height={heigth}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -64,9 +88,15 @@ export function Avatar() {
   )
 }
 
-export function Close() {
+export function Close({ width = 16, heigth = 16 }) {
   return (
-    <svg width={16} height={17} fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width={width}
+      height={heigth}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
         fillRule="evenodd"
         clipRule="evenodd"

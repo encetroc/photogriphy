@@ -9,7 +9,7 @@ export function NavigationBar() {
         <Logo />
       </div>
       <div className="navigation__links">
-        <NavigationLink to="/all-photos">
+        <NavigationLink to="/">
           <Image />
         </NavigationLink>
         <NavigationLink to="liked-photos">

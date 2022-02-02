@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { AllPhotos, LikedPhotos } from 'routes'
 import './index.scss'
 import App from './App'
@@ -11,8 +11,10 @@ ReactDOM.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="all-photos" element={<AllPhotos />} />
+          <Route path="/" element={<AllPhotos />} />
+          <Route path="/:id" element={<AllPhotos />} />
           <Route path="liked-photos" element={<LikedPhotos />} />
+          <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
     </BrowserRouter>

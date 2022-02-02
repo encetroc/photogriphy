@@ -4,7 +4,7 @@ import './LikeBtn.scss'
 export function LikeBtn({ className }: { className: string }) {
   return (
     <div className={`likeBtn ${className}`}>
-      <Heart />
+      <Heart width={16} heigth={16} />
       Like
     </div>
   )
