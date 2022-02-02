@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom'
-import { NavigationBar } from 'components'
+import { NavigationBar, Modal } from 'components'
 import './App.scss'
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
       <div className="container__content">
         <Outlet />
       </div>
+      <Modal />
     </div>
   )
 }
