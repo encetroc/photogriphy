@@ -25,6 +25,13 @@
     width: 32px;
     height: 32px;
     border-radius: 10px;
-    background-color: #2D9CDB;
+    background-color: #3c3c3c;
+    opacity: 0.8;
+    cursor: pointer;
+
+    &--like {
+      background-color: #2d9cdb;
+      opacity: 1;
+    }
   }
 }
