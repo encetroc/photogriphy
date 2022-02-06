@@ -1,20 +1,27 @@
 import { useParams } from 'react-router-dom'
+import { usePhoto } from 'context'
+import { Photo } from 'types'
 import { Avatar } from 'icons'
 import { LikeBtn, CloseBtn } from 'components'
 import './Modal.scss'
+import { useMemo } from 'react'
 
 export function Modal() {
   const { id } = useParams()
+  const { state } = usePhoto()
+  const photo: Photo = useMemo(() => {
+    return state[id || '']
+  }, [id, state])
   return (
     <div className="modal">
       <div className="modal__inner">
-        <LikeBtn className="modal__like--mobile" />
+        <LikeBtn className="modal__like--mobile" like={photo.like} />
         <CloseBtn className="modal__close--mobile" />
         <div className="modal__img">
-          <img src={`https://source.unsplash.com/random/${id}`} alt="sample" />
+          <img src={photo.regular} alt="sample" />
         </div>
         <div className="modal__content">
-          <LikeBtn className="modal__like" />
+          <LikeBtn className="modal__like" like={photo.like} />
           <CloseBtn className="modal__close" />
           <h2 className="modal__title">Leaves in the jungle</h2>
           <div className="modal__author">

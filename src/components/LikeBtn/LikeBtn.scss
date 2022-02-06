@@ -6,7 +6,11 @@
   width: 66px;
   height: 32px;
   border-radius: 10px;
-  background-color: #3C3C3C;
+  background-color: #3c3c3c;
   font-size: 0.875rem;
-  opacity: .8;
+  opacity: 0.8;
+
+  &--like {
+    background-color: #2d9cdb;
+  }
 }

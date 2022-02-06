@@ -1,20 +1,13 @@
 import { createContext, useContext, useReducer } from 'react'
+import {
+  PhotoState,
+  PhotoActionKind,
+  PhotoAction,
+  PhotoContextValue,
+} from 'types'
 import { data } from 'data'
 
 const PhotoContext = createContext({})
-
-type Photo = {
-  id: string
-  small: string
-  regular: string
-  name: string
-  photo: string
-  download: string
-  description: string
-  like: boolean
-}
-
-type PhotoState = Record<string, Photo>
 
 const initialPhotoState: PhotoState = {}
 
@@ -25,7 +18,6 @@ function initializePhoto(initialPhotoState: PhotoState): PhotoState {
   if (likedPhotoIds.length === 0) {
     localStorage.setItem('likedPhotoIds', JSON.stringify([]))
   }
-  console.log(likedPhotoIds)
   return data.reduce((map: any, photo) => {
     map[photo.id] = {
       id: photo.id,
@@ -41,49 +33,29 @@ function initializePhoto(initialPhotoState: PhotoState): PhotoState {
   }, {})
 }
 
-enum PhotoActionKind {
-  Like = 'LIKE',
-}
-
-type PhotoAction = {
-  type: PhotoActionKind
-  payload: string
-}
-
 function likePhotoAction(id: string): PhotoAction {
   return { type: PhotoActionKind.Like, payload: id }
 }
 
 function photoReducer(state: PhotoState, action: PhotoAction): PhotoState {
   const { type, payload } = action
-  console.log(state[payload])
   switch (type) {
     case PhotoActionKind.Like:
-      let likedPhotoIds: string[] = JSON.parse(
-        localStorage.getItem('likedPhotoIds') || '[]'
-      )
-      if(likedPhotoIds.includes(payload)) {
-        likedPhotoIds = likedPhotoIds.filter((id: string) => id !== payload)
-      } else {
-        likedPhotoIds.push(payload)
-      }
-      localStorage.setItem('likedPhotoIds', JSON.stringify(likedPhotoIds))
-      return {
+      const newState = {
         ...state,
         [payload]: {
           ...state[payload],
           like: !state[payload].like,
         },
       }
+      const likedPhotoIds = Object.values(newState)
+        .filter((photo) => photo.like)
+        .map((photo) => photo.id)
+      localStorage.setItem('likedPhotoIds', JSON.stringify(likedPhotoIds))
+      return newState
     default:
       return state
   }
-}
-
-type PhotoContextValue = {
-  state: PhotoState
-  dispatch: React.Dispatch<PhotoAction>
-  likePhotoAction: (id: string) => PhotoAction
 }
 
 export function usePhoto() {
