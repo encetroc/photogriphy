@@ -103,11 +103,17 @@
         justify-content: center;
       }
 
+      &__photo {
+        border-radius: 9999px;
+      }
+
       &__name {
         font-size: 1.125rem;
         color: #bdbdbd;
         margin-top: 5px;
       }
+
+
     }
   }
 

@@ -2,6 +2,10 @@
   display: inline-block;
   position: relative;
 
+  :hover {
+    opacity: .7;
+  }
+
   &:first-child {
     margin-bottom: 24px;
   }

@@ -1,4 +1,5 @@
 .navigation {
+  position: relative;
   background-color: #3c3c3c;
   height: 100vh;
   width: 90px;
@@ -10,7 +11,8 @@
   z-index: 10;
 
   &__logo {
-    padding-top: 49.2px;
+    position: absolute;
+    top: 49.2px;
   }
 
   &__links {
@@ -30,8 +32,9 @@
     bottom: 0;
 
     &__logo {
-      padding-top: unset;
-      padding-left: 24px;
+      top: unset;
+      left: 24px;
+      bottom: 24px;
     }
 
     &__links {

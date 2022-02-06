@@ -5,7 +5,7 @@ import './CloseBtn.scss'
 export function CloseBtn({ className }: { className: string }) {
   const navigate = useNavigate()
   return (
-    <div className={`closeBtn ${className}`} onClick={() => navigate('/')}>
+    <div className={`closeBtn ${className}`} onClick={() => navigate(-1)}>
       <Close />
     </div>
   )

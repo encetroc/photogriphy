@@ -14,6 +14,7 @@ ReactDOM.render(
           <Route path="/" element={<AllPhotos />} />
           <Route path="/:id" element={<AllPhotos />} />
           <Route path="liked-photos" element={<LikedPhotos />} />
+          <Route path="liked-photos/:id" element={<LikedPhotos />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>

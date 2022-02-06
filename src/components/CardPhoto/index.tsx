@@ -19,7 +19,7 @@ export function CardPhoto({
   }
   return (
     <div className="gridCard">
-      <img alt="simplePhoto" src={small} onClick={() => navigate(`/${id}`)} />
+      <img alt="simplePhoto" src={small} onClick={() => navigate(`./${id}`)} />
       <div
         className={likeClass(like)}
         onClick={() => dispatch(likePhotoAction(id))}
