@@ -74,10 +74,10 @@ export function PhotoContextProvider({ children }: { children: JSX.Element }) {
   const [state, dispatch] = useReducer(photoReducer, initialPhotoState)
   useEffect(() => {
     const photosPage1 = fetch(
-      'https://api.unsplash.com/photos/?page=3&client_id=-xcRehLaUi0D167HAJc9HGOZS17QpQk11CDzmSrdnPo'
+      `https://api.unsplash.com/photos/?page=3&client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}`
     ).then((data) => data.json())
     const photosPage2 = fetch(
-      'https://api.unsplash.com/photos/?page=4&client_id=-xcRehLaUi0D167HAJc9HGOZS17QpQk11CDzmSrdnPo'
+      `https://api.unsplash.com/photos/?page=4&client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}`
     ).then((data) => data.json())
 
     Promise.all([photosPage1, photosPage2]).then((pages) => {
